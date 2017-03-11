@@ -3,30 +3,26 @@ import UIKit
 class LocalizableLabel: UILabel {
     
     private var localizeKey: String?
-    override public var text:String?  {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        localizeKey = text
+        text = localizeKey
+    }
+    
+    override public var text: String?  {
         set (newValue) {
-            self.localizeKey = newValue
-            if let key = newValue {
-                let localizedString = LocalizationHelper.shared.localized(key)
-                super.text = localizedString
-            } else {
-                super.text = newValue
-            }
+            localizeKey = newValue
+            super.text = LocalizationHelper.shared.localized(localizeKey)
         }
         get {
             return super.text
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.localizeKey = self.text
-        self.text = self.localizeKey
-    }
-    
     override func onUpdateLocale() {
         super.onUpdateLocale()
-        self.text = self.localizeKey
+        text = localizeKey
     }
 
 }

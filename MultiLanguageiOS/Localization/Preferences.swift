@@ -2,8 +2,8 @@ import Foundation
 
 class Preferences {
     
-    private static let kCurrentLocale       = "CurrentLocale"
-    private static let kDefaultLocale       = LangJA
+    private static let kCurrentLocale = "CurrentLocale"
+    private static let kDefaultLocale = LangJA
     
     static let shared = Preferences()
     

@@ -4,6 +4,7 @@ let LangEN = "en"
 let LangJA = "ja"
 
 class LocalizationHelper {
+    
     private var enBundle: Bundle?
     private var jaBundle: Bundle?
     
@@ -16,7 +17,10 @@ class LocalizationHelper {
     
     static let shared = LocalizationHelper()
     
-    func localized(_ key: String) -> String {
+    func localized(_ key: String?) -> String? {
+        guard let key = key else {
+            return nil
+        }
         var bundle: Bundle?
         switch Preferences.shared.currentLocale() {
         case LangEN:
@@ -45,4 +49,5 @@ class LocalizationHelper {
         }
         return NSLocalizedString(key, tableName: nil, bundle: bundle!, value: key, comment: key)
     }
+    
 }
