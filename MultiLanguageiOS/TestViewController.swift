@@ -10,15 +10,10 @@ import UIKit
 
 class TestViewController: UIViewController {
 
+    @IBOutlet weak var testButton: LocalizableButton!
     @IBOutlet weak var testLabel: LocalizableLabel!
+    @IBOutlet weak var testTextField: LocalizableTextField!
     var currentLocale = Preferences.shared.currentLocale()
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if currentLocale.caseInsensitiveCompare(Preferences.shared.currentLocale()) != .orderedSame {
-            onUpdateLocale()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +21,12 @@ class TestViewController: UIViewController {
     
     @IBAction func jaClicked(_ sender: Any) {
         Preferences.shared.setCurrentLocale(LangJA)
-        testLabel.text = LocalizationHelper.shared.localized("CHANGE_LANGUAGE")
+        view.onUpdateLocale()
     }
     
     @IBAction func enClicked(_ sender: Any) {
         Preferences.shared.setCurrentLocale(LangEN)
-        testLabel.text = LocalizationHelper.shared.localized("CHANGE_LANGUAGE")
+        view.onUpdateLocale()
     }
-    
-    func onUpdateLocale() {
-    }
-    
+
 }

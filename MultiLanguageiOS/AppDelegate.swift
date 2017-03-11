@@ -15,11 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let tutorialViewController = TestViewController()
-        let navigationController = BaseNavigationController(rootViewController: tutorialViewController)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = TestViewController()
         self.window?.makeKeyAndVisible()
         //set language
         Preferences.shared.setCurrentLocale(LangEN)

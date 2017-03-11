@@ -19,8 +19,7 @@
 		30215A211E7251840030874A /* LocalizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30215A1E1E7251840030874A /* LocalizableTextField.swift */; };
 		30215A241E7251FF0030874A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30215A221E7251FF0030874A /* TestViewController.swift */; };
 		30215A251E7251FF0030874A /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30215A231E7251FF0030874A /* TestViewController.xib */; };
-		30215A271E7252400030874A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30215A261E7252400030874A /* BaseNavigationController.swift */; };
-		30215A291E7253050030874A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30215A281E7253050030874A /* Extensions.swift */; };
+		F863EC911E74223500CDE828 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F863EC901E74223500CDE828 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +37,7 @@
 		30215A1E1E7251840030874A /* LocalizableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizableTextField.swift; path = Localization/LocalizableTextField.swift; sourceTree = "<group>"; };
 		30215A221E7251FF0030874A /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		30215A231E7251FF0030874A /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		30215A261E7252400030874A /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		30215A281E7253050030874A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F863EC901E74223500CDE828 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Localization/UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +77,6 @@
 				30215A0C1E7250570030874A /* Info.plist */,
 				30215A221E7251FF0030874A /* TestViewController.swift */,
 				30215A231E7251FF0030874A /* TestViewController.xib */,
-				30215A261E7252400030874A /* BaseNavigationController.swift */,
-				30215A281E7253050030874A /* Extensions.swift */,
 			);
 			path = MultiLanguageiOS;
 			sourceTree = "<group>";
@@ -95,6 +91,7 @@
 				30215A1D1E7251840030874A /* LocalizableLabel.swift */,
 				30215A1E1E7251840030874A /* LocalizableTextField.swift */,
 				30215A161E7250FF0030874A /* Preferences.swift */,
+				F863EC901E74223500CDE828 /* UIView+Extensions.swift */,
 			);
 			name = Localization;
 			sourceTree = "<group>";
@@ -175,11 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30215A1F1E7251840030874A /* LocalizableButton.swift in Sources */,
-				30215A291E7253050030874A /* Extensions.swift in Sources */,
 				30215A241E7251FF0030874A /* TestViewController.swift in Sources */,
 				30215A211E7251840030874A /* LocalizableTextField.swift in Sources */,
+				F863EC911E74223500CDE828 /* UIView+Extensions.swift in Sources */,
 				30215A011E7250570030874A /* AppDelegate.swift in Sources */,
-				30215A271E7252400030874A /* BaseNavigationController.swift in Sources */,
 				30215A201E7251840030874A /* LocalizableLabel.swift in Sources */,
 				30215A171E7250FF0030874A /* Preferences.swift in Sources */,
 				30215A151E7250DD0030874A /* LocalizationHelper.swift in Sources */,
