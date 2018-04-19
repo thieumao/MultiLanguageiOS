@@ -29,4 +29,8 @@ class TestViewController: UIViewController {
         view.onUpdateLocale()
     }
 
+    @IBAction func outsideClicked(_ sender: Any) {
+        testTextField.resignFirstResponder()
+    }
+    
 }
